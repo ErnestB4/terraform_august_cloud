@@ -22,11 +22,19 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 
-resource "aws_instance" "web1" {
+resource "aws_instance" "web2" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorld2"
+  }
+}
+resource "aws_instance" "web3" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld3"
   }
 }
