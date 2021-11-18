@@ -21,7 +21,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
-}
+
 resource "aws_instance" "web1" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
